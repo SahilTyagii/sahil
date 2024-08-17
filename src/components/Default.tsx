@@ -55,7 +55,7 @@ const CustomTypewriter: React.FC<CustomTypewriterProps> = ({
     <span>
       {displayText.split(' ').map((word, index) => {
         // Define the words you want to color differently
-        const coloredWords = ['Web', 'Intern', 'Student', 'Solver'];
+        const coloredWords = ['Developer', 'Intern', 'Student', 'Solver'];
         const isColored = coloredWords.includes(word.replace('_', '')); // Remove cursor if present
 
         return (
@@ -81,7 +81,7 @@ const Default = () => {
         <h1 className="md:text-3xl text-2xl">
           I am a{' '}
           <CustomTypewriter
-            words={['Student', 'Front-End Intern', 'Full-Stack Web Developer', 'Problem Solver']}
+            words={['Student', 'Front-End Intern', 'FullStack Developer', 'Problem Solver']}
             typeSpeed={70}
             deleteSpeed={50}
             delaySpeed={2000}
