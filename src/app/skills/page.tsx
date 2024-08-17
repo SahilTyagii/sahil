@@ -2,14 +2,14 @@ import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('@/components/Navbar'), { ssr: false });
 
-import './globals.css'
-import Default from '@/components/Default';
+import '../globals.css'
+import Skills from '@/components/Skills';
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false,
 });
 
-export default function Home() {
+export default function SkillPage() {
   return (
     <main className="flex h-screen w-full flex-col items-center justify-between custom-scrollbar overflow-hidden">
       <AnimatedCursor
@@ -22,7 +22,7 @@ export default function Home() {
         clickables={['h1', 'a']}
       />
       <Navbar />
-      <Default />
+        <Skills />
     </main>
   );
 }

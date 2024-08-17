@@ -1,17 +1,19 @@
+import React from 'react'
+
 import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('@/components/Navbar'), { ssr: false });
 
-import './globals.css'
-import Default from '@/components/Default';
+import '../globals.css'
+import Projects from '@/components/Projects';
 
 const AnimatedCursor = dynamic(() => import('react-animated-cursor'), {
   ssr: false,
 });
 
-export default function Home() {
+const ProjectsPage: React.FC = () => {
   return (
-    <main className="flex h-screen w-full flex-col items-center justify-between custom-scrollbar overflow-hidden">
+    <main className="flex h-screen w-full flex-col items-center justify-between custom-scrollbar overflow-hidden bg-black">
       <AnimatedCursor
         innerSize={12}
         outerSize={16}
@@ -22,7 +24,9 @@ export default function Home() {
         clickables={['h1', 'a']}
       />
       <Navbar />
-      <Default />
+        <Projects />
     </main>
-  );
+  )
 }
+
+export default ProjectsPage

@@ -1,0 +1,20 @@
+/* Default.css */
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #E89AF1, #3b82f6); /* Gradient colors */
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    background-size: 500% auto;
+    animation: gradientAnimation 1s ease-in-out infinite alternate;
+  }
+  
