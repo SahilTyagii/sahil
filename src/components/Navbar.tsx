@@ -23,11 +23,11 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <div className="w-11/12 md:w-8/12 lg:w-6/12 h-16 backdrop-blur-lg backdrop-brightness-125 bg-gradient-to-r from-white/10 via-white/20 to-white/10 text-white/80 shadow-2xl shadow-black/50 fixed top-6 z-50 flex justify-between items-center px-8 rounded-full">
+    <div className="w-[97%] md:w-8/12 lg:w-6/12 h-16 backdrop-blur-lg backdrop-brightness-125 bg-gradient-to-r from-white/10 via-white/20 to-white/10 text-white/80 shadow-2xl shadow-black/50 fixed top-6 z-50 flex md:justify-between justify-center items-center px-8 rounded-full">
       <div className="text-xl font-semibold tracking-wide md:block hidden">
         <Image src={avatar} alt="Avatar" width={48} quality={100} unoptimized/>
       </div>
-      <div className="flex space-x-6">
+      <div className="flex space-x-6 justify-between">
         <Link
           href="/"
           className={`hover:text-white/40 transition duration-300 flex items-center
@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             ${activeLink === '/contact' ? 'text-[#E89AF1] font-semibold' : 'text-white/80'}`}
           onClick={() => setActiveLink('/contact')}
         >
-          Contact Me
+          Contact
         </Link>
       </div>
     </div>
