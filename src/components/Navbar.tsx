@@ -58,7 +58,7 @@ const Navbar: React.FC = () => {
             ${activeLink === '/contact' ? 'text-[#E89AF1] font-semibold' : 'text-white/80'}`}
           onClick={() => setActiveLink('/contact')}
         >
-          Contact
+          Contact Me
         </Link>
       </div>
     </div>

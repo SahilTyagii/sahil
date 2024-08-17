@@ -1,6 +1,6 @@
 import Spline from '@splinetool/react-spline';
 import React from 'react';
-import './Default.css'; // Make sure to create and import this CSS file
+import './Default.css';
 
 const Default = () => {
   return (
