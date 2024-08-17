@@ -19,7 +19,6 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel';
 import Image, { StaticImageData } from 'next/image';
-import { Button } from './ui/button';
 
 const Projects: React.FC = () => {
 
@@ -69,15 +68,15 @@ const Projects: React.FC = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex items-center overflow-hidden">
-      <div className="fixed left-16 w-2/5">
+      <div className="fixed md:left-16 md:w-1/2 w-full top-16 ">
         <Carousel plugins={[Autoplay({ delay: 3000 })]} className="text-gray-200 ml-4 mt-10">
           <CarouselContent className="space-x-4">
             {projects.map((project, index) => (
               <CarouselItem key={index} className="w-full">
                 <div className="flex flex-col items-start space-y-4 p-4 ">
-                  <Image width={600} src={project.image} alt={project.title} className="rounded-md" />
+                  <Image width={650} src={project.image} alt={project.title} className="rounded-md" quality={100} unoptimized />
                   <h1 className="text-2xl font-bold">{project.title}</h1>
-                  <p className="text-lg">{project.description}</p>
+                  <p className="md:text-lg text-sm text-gray-300">{project.description}</p>
                   <div className="flex space-x-4">
                   <a href={project.github} target='_blank' rel='noreferrer noopener'>
                   <button className="relative text-gray-200 flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">

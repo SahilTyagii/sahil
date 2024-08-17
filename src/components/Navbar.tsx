@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import avatar from '/public/avatarNavbar.png';
+import Image from 'next/image';
 
 const Navbar: React.FC = () => {
   const [activeLink, setActiveLink] = useState<string>('/');
@@ -23,7 +25,7 @@ const Navbar: React.FC = () => {
   return (
     <div className="w-11/12 md:w-8/12 lg:w-6/12 h-16 backdrop-blur-lg backdrop-brightness-125 bg-gradient-to-r from-white/10 via-white/20 to-white/10 text-white/80 shadow-2xl shadow-black/50 fixed top-6 z-50 flex justify-between items-center px-8 rounded-full">
       <div className="text-xl font-semibold tracking-wide">
-        Sahil
+        <Image src={avatar} alt="Avatar" width={48} quality={100} unoptimized className='md:block hidden'/>
       </div>
       <div className="flex space-x-6">
         <Link
