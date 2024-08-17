@@ -68,13 +68,13 @@ const Projects: React.FC = () => {
 
   return (
     <div className="fixed top-0 left-0 w-full h-screen flex items-center overflow-hidden">
-      <div className="fixed md:left-16 md:w-1/2 w-full top-16 ">
-        <Carousel plugins={[Autoplay({ delay: 3000 })]} className="text-gray-200 ml-4 mt-10">
+      <div className="fixed md:left-16 md:w-1/2 w-full top-28 md:top-14">
+        <Carousel plugins={[Autoplay({ delay: 3000 })]} className="text-gray-200 mt-10">
           <CarouselContent className="space-x-4">
             {projects.map((project, index) => (
               <CarouselItem key={index} className="w-full">
                 <div className="flex flex-col items-start space-y-4 p-4 ">
-                  <Image width={650} src={project.image} alt={project.title} className="rounded-md" quality={100} unoptimized />
+                  <Image width={800} src={project.image} alt={project.title} className="rounded-md" quality={100} unoptimized />
                   <h1 className="text-2xl font-bold">{project.title}</h1>
                   <p className="md:text-lg text-sm text-gray-300">{project.description}</p>
                   <div className="flex space-x-4">
